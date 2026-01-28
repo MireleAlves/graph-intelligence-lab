@@ -1,0 +1,18 @@
+// Constraints (Neo4j 5+ / Aura)
+CREATE CONSTRAINT user_userId IF NOT EXISTS
+FOR (u:User) REQUIRE u.userId IS UNIQUE;
+
+CREATE CONSTRAINT movie_movieId IF NOT EXISTS
+FOR (m:Movie) REQUIRE m.movieId IS UNIQUE;
+
+CREATE CONSTRAINT series_seriesId IF NOT EXISTS
+FOR (s:Series) REQUIRE s.seriesId IS UNIQUE;
+
+CREATE CONSTRAINT actor_actorId IF NOT EXISTS
+FOR (a:Actor) REQUIRE a.actorId IS UNIQUE;
+
+CREATE CONSTRAINT director_directorId IF NOT EXISTS
+FOR (d:Director) REQUIRE d.directorId IS UNIQUE;
+
+CREATE CONSTRAINT genre_name IF NOT EXISTS
+FOR (g:Genre) REQUIRE g.name IS UNIQUE;
